@@ -2,6 +2,8 @@
 :root {
   --background-color: #3a4945;
   --accent-color: #6d9c71;
+  --accent-color-2: #ccffbb;
+  --container-color: #222222;
 }
 
 html {
@@ -12,7 +14,7 @@ html {
   align-content: center;
 }
 
-.main-body {
+body {
   background: var(--background-color);
   align-content: center;
   text-align: center;
@@ -27,11 +29,11 @@ html {
 }
 
 .evidence-container {
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 25%;
+  margin-left: 25%;
   color: var(--accent-color);
   border-radius: 20px;
-  background: #222222;
+  background: var(--container-color);
   padding: 20px;
 }
 
@@ -55,21 +57,35 @@ html {
   font-size: 17px;
 }
 
+.submit-answer-box{
+  background-color: var(--container-color);
+  margin-right: 25%;
+  margin-left: 25%;
+  color: var(--accent-color);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #dddddd;
 }
 
 .tab button.active {
   background-color: var(--accent-color);
 }
 
+.tab button {
+  background-color: var(--accent-color-2);
+}
+
+
 .tabcontent {
-  display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-  border: none;
   outline: none;
+  background: var(--accent-color);
+  border-radius: 0 0 10px 10px;
 }
 
 .inner-tab-content {
