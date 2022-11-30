@@ -19,7 +19,10 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/charts.css">
+
     <meta name="theme-color" content="#fafafa">
+
 
   </head>
 
@@ -27,9 +30,10 @@
         <h1 class="title">Cryptography Game</h1>
 
         <div class="submit-answer-box">
-
-
-
+          <form>
+            <input type="text" id="userInput" name="userInput" class="user-input">
+            <!-- <button class="submit-answer-button">Try Answer</button> -->
+          </form>
         </div>
 
         <div class="evidence-container">
@@ -40,22 +44,24 @@
           </div>
 
           <div id="testData" class="tabcontent">
-              <h3>London</h3>
-              <p>London is the capital city of England.</p>
+            <div style="height: 30em;">
+
+            </div>
           </div>
 
           <div id="freqGraph" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
+            <div style="height: 30em;">
+            </div>
           </div>
 
           <div id="anotherTab" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+            <div style="height: 30em;">
+            </div>
           </div>
         </div>
 
         <script src="js/main.js"></script>
+
   </body>
 
 </html>
