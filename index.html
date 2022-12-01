@@ -4,7 +4,9 @@
 
   <head>
     <meta charset="utf-8">
+
     <title></title>
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,8 +33,8 @@
 
         <div class="submit-answer-box">
           <form>
-            <input type="text" id="userInput" name="userInput" class="user-input">
-            <!-- <button class="submit-answer-button">Try Answer</button> -->
+            <button class="submit-answer-button">Try answer</button>
+            <span class="input-span"><input type="text" class="user-input" id="submitButton" /></span>
           </form>
         </div>
 
@@ -45,12 +47,24 @@
 
           <div id="testData" class="tabcontent">
             <div style="height: 30em;">
-
             </div>
           </div>
 
           <div id="freqGraph" class="tabcontent">
             <div style="height: 30em;">
+              <table class="graph" id="letterFrequencyGraph">
+                <caption>Letter Frequency Graph</caption>
+                <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Percent</th>
+                </tr>
+                </thead>
+
+                <tbody id="letterFrequencyGraphTbody">
+                </tbody>
+
+              </table>
             </div>
           </div>
 
@@ -60,8 +74,9 @@
           </div>
         </div>
 
-        <script src="js/main.js"></script>
-
   </body>
+
+  <script src="js/main.js"></script>
+  <script src="js/chart.js"></script>
 
 </html>

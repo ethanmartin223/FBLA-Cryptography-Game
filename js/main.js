@@ -14,8 +14,9 @@ function openTab(evt, cityName) {
 
 document.getElementById("defaultOpen").click();
 
+//NewTAB
 
-//Tab
+//Variable Creation
 const plaintextAlphabet = [];
 let cryptotextAlphabet = "zyxwvutsrqponmlkjihgfedcba";
 let plaintext = "abcdefghijklmnopqrstuvwxyz";
@@ -34,8 +35,31 @@ const plaintextAlphabetFrequencyAnalysis = new Map();
 for (let i = 0; i < plaintextAlphabetLength; i++) {
   plaintextAlphabetFrequencyAnalysis.set(plaintextAlphabet.at(i),plaintextAlphabetFrequencies.at(i));
 }
-console.log(plaintextAlphabetFrequencyAnalysis);
 
+//Frequency Analysis Functions
+
+//Creates Map of each letter in the cryptotext and its proportional occurrence
+function analyzeFrequency(cryptotext) {
+  cryptotext = cryptotext.toLowerCase();
+  let cryptotextLength = (cryptotext.replaceAll(" ","")).length;
+  let cryptotextFrequencyAnalysis = new Map();
+
+  for (let i = 0; i < plaintextAlphabetLength; i++) {
+    let letter = plaintextAlphabet.at(i);
+    let count = 0;
+    for (let c = 0; c < cryptotextLength+1; c++) {
+      if (cryptotext.substring(c,c+1) == letter) {
+        count += 1;
+      }
+    }
+    cryptotextFrequencyAnalysis.set(plaintextAlphabet.at(i),(count/cryptotextLength));
+  }
+  return cryptotextFrequencyAnalysis;
+}
+
+console.log(analyzeFrequency("The Eae"));
+
+//Cipher Functions
 function encrypt(plaintext, plaintextAlphabet, cryptotextAlphabet) {
   let cryptotext = "";
   for (let i = 0; i < plaintext.length; i++) {
@@ -101,8 +125,4 @@ function keyword(plaintextAlphabet, keyword, keyletter) {
   return caesar(cryptotextAlphabet, plaintextAlphabet.indexOf(keyletter));
 }
 
-console.log(atbash(plaintextAlphabet))
-console.log(caesar(plaintextAlphabet, 4));
-console.log(rote(plaintextAlphabet, 4));
-console.log(keyword(plaintextAlphabet, "crypt", "m"));
 
